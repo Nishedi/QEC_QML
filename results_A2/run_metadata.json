@@ -1,0 +1,29 @@
+{
+  "purpose": "A2: quantum circuit correction + classical ML decoder",
+  "source": "calibration_data.json",
+  "calibration_sha256": "22ed1e5da667099501246a87266b0f9a32228f243011e22c2b05fced58353963",
+  "calibration_timestamp": "2026-10-29T05:25:20.651905Z",
+  "calibration_synthetic": false,
+  "noise_model_convention": "1 - reported RB/IRB metric as Aer depolarizing parameter",
+  "correlated_fault": "Kraus channel (1-p)*I + p*(X_DATA X_ANC_A), inserted before decode",
+  "note": "Synthetic correlated fault is NOT inferred from Odra calibration. Training syndrome reads are noisy; Bell recovery uses coherent controls. Qiskit instruction kraus is simulator-only.",
+  "rates": [
+    0.0,
+    0.03,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.3
+  ],
+  "train_shots_per_logical_bit": 3000,
+  "test_shots_per_logical_bit": 1000,
+  "bell_shots_per_basis_per_method": 3000,
+  "seed": 42,
+  "qubit_map": {
+    "ANC_A": 0,
+    "ANC_B": 1,
+    "DATA": 2,
+    "REF": 3
+  }
+}

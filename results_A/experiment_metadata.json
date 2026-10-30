@@ -1,0 +1,32 @@
+{
+  "source": "training_data.csv",
+  "source_sha256": "95bd2d7d1f666883266d1fd2dbd545a3f14055c7ef5a9ac1dcfcab05ae7da580",
+  "experiment": "decoder-only stress test; correlated classical flips applied to measured bits",
+  "injected_fault": "X on DATA and ANC_A together (mask 110 in D,A,B order)",
+  "correlation_probabilities": [
+    0.0,
+    0.03,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.3
+  ],
+  "export_rate": 0.15,
+  "seed": 42,
+  "features": [
+    "s1",
+    "s2"
+  ],
+  "target": "additional_x recomputed after fault injection",
+  "train_test_split": "preserved exactly from input CSV",
+  "evaluation": "same held-out test rows for both methods",
+  "limitations": [
+    "Added correlated faults are synthetic, NOT observed on Odra 5.",
+    "Faults are applied after the noisy measurement, not as quantum gates.",
+    "The original CSV is calibration-based simulation, not hardware measurements.",
+    "This is only classical decoding of computational basis states, NOT quantum coherence or entanglement protection.",
+    "With only 4 syndromes an empirical lookup can match ML; a win over fixed majority decoding is not proof that ML is necessary.",
+    "Results for synthetic faults do not establish a benefit on physical hardware."
+  ]
+}

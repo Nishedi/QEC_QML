@@ -1,0 +1,20 @@
+name: qml_qec
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - ipykernel
+  - numpy
+  - pandas
+  - scikit-learn
+  - scipy
+  - matplotlib
+  - pip
+  - pip:
+      - iqm-client==34.0.1
+      - qiskit==1.2.4
+      - qiskit-aer==0.15.1
+      - qiskit-machine-learning==0.7.2
+      - qiskit-algorithms==0.3.0
+      - dotenv==0.9.9
